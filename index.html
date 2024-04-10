@@ -4,8 +4,163 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fit.io</title>
+    <style>
+      @font-face {
+        font-family: "HindSight2020";
+        src: url("Hindsight 2020.otf") format("opentype");
+      }
+
+      body,
+      html {
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        background: rgb(4, 1, 1);
+        background: radial-gradient(
+          circle,
+          rgba(219, 1, 1, 0.40388655462184875) 40%,
+          rgba(4, 1, 1, 1) 85%,
+          black 100%
+        );
+      }
+
+      .bg-img {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        mix-blend-mode: difference;
+        background-image: url("https://img.freepik.com/free-photo/red-swirl-with-word-red-it_1340-27374.jpg?t=st=1712725172~exp=1712728772~hmac=8230ef68f2e3a18442313cb5de5b2b98e64e183a9b89a927a833bf53402a7af2&w=996");
+        background-position: right;
+        background-size: cover;
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+      }
+
+      .login-container {
+        z-index: 1;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 600px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 5%;
+      }
+      .login-header {
+        width: 500px;
+        margin-bottom: 10px;
+        height: 5%;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Hindsight2020";
+        font-weight: 500;
+      }
+      .login-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 85%;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        border-radius: 5%;
+        border: 1px solid white;
+        background: rgb(225, 29, 72);
+        background: linear-gradient(
+          141deg,
+          rgba(255, 0, 55, 0.9) 18%,
+          rgba(253, 164, 175, 0.5) 42%,
+          rgba(249, 168, 212, 0.8) 59%,
+          rgba(255, 0, 55, 0.9) 90%
+        );
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        backdrop-filter: blur(8.9px);
+        -webkit-backdrop-filter: blur(8.9px);
+      }
+
+      .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 15px;
+      }
+
+      .username {
+        background-color: white;
+        background-image: url("user.svg");
+        background-position: 5px 0px;
+        background-repeat: no-repeat;
+      }
+
+      .password {
+        background-color: white;
+        background-image: url("password.svg");
+        background-position: 5px 0px;
+        background-repeat: no-repeat;
+      }
+
+      input {
+        box-sizing: border-box;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+    </style>
   </head>
   <body>
-    <div></div>
+    <div class="bg-img"></div>
+
+    <div class="login-container">
+      <div class="login-header">Fit.io</div>
+      <div class="login-area">
+        <h1 style="color: black">User Login</h1>
+        <form action="/login" class="login" method="post">
+          <input
+            type="text"
+            class="username"
+            name="username"
+            placeholder="         Username"
+          />
+          <input
+            type="password"
+            class="password"
+            name="password"
+            placeholder="         Password"
+          />
+          <input
+            style="margin-top: 10px"
+            type="submit"
+            class=""
+            value="LOGIN"
+          />
+        </form>
+      </div>
+      <p
+        style="
+          bottom: 1;
+          text-align: center;
+          font-size: 18px;
+          font-style: italic;
+        "
+      >
+        Image by Sketchepedia on Freepik, Icons by Raj Dev and Muhammad Haq on
+        Freeicons.io
+      </p>
+    </div>
   </body>
 </html>
