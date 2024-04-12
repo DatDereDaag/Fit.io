@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      section {
+        margin-top: 100px;
+      }
+
+      .catalogue-container {
+        padding-top: 100px;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        row-gap: 200px;
+        transition: all 1s ease;
+      }
+
+      .exercise-list {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 14%;
+        left: 130%;
+        height: 550px;
+        width: 1000px;
+        background-color: black;
+        transition: all 1s ease;
+      }
+
+      .exercise-container {
+        scale: 1;
+        pointer-events: none;
+        transition: all 1s ease;
+      }
+
+      .exercise-card {
+        pointer-events: auto;
+        height: 450px;
+        width: 490px;
+        object-position: center;
+        aspect-ratio: 1;
+
+        clip-path: path(
+          "M 0 427 l 55 0 C 70 393.667 90 360.333 110 327 L 200 327 l 0 20 L 120 347 L 78 427 L 100 427 L 130 367 L 220 367 L 220 387 L 140 387 L 120 427 L 290 427 C 350 287 410 147 470 7 L 200 7 L 180 47 L 240 47 L 230 67 L 170 67 L 160 87 L 270 87 L 260 107 L 160 107 L 140 147 Z"
+        );
+
+        transition: all 1s ease;
+        filter: grayscale();
+        transform: scale(1.25);
+      }
+
+      .exercise-title {
+        pointer-events: auto;
+        font-family: "Black Ops One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        position: absolute;
+        top: 70px;
+        right: 5px;
+        color: white;
+        background-color: darkred;
+        font-size: 35px;
+        transform: rotate(-65deg);
+        transition: all 1s ease;
+      }
+
+      .exercise-container:nth-child(even) > .exercise-card {
+        clip-path: path(
+          "M 0 427 l 55 0 C 70 393.667 90 360.333 110 327 L 120 347 L 78 427 L 100 427 L 130 367 L 140 387 L 120 427 L 290 427 C 350 287 410 147 470 7 L 200 7 L 180 47 L 241 47 L 295 15 L 329 15 L 250 67 L 170 67 L 160 87 L 270 87 L 346 33 L 382 33 L 283 107 L 253 107 L 160 107 L 140 147 Z"
+        );
+      }
+
+      .exercise-card:hover {
+        filter: none;
+      }
+
+      .exercise-container:hover {
+        scale: 1.15;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <section>
+    <div id="catalogue-container" class="catalogue-container">
+      <div class="exercise-container">
+        <img
+          src="exercise_images\bicep-curl.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Biceps')"
+        />
+        <div class="exercise-title">Biceps</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\tricep-dip.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Triceps')"
+        />
+        <div class="exercise-title">Triceps</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\bench-press.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Chest')"
+        />
+        <div class="exercise-title">Chest</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\pull-up.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Back')"
+        />
+        <div class="exercise-title">Back</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\ab.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Abs')"
+        />
+        <div class="exercise-title">Abs</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\stretching.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Stretching')"
+        />
+        <div class="exercise-title">Stretching</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\warmup.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Warm Up')"
+        />
+        <div class="exercise-title">Warm Up</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\lats.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Lats')"
+        />
+        <div class="exercise-title">Lats</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\deadlift.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Hamstrings')"
+        />
+        <div class="exercise-title" style="right: -20px">Hamstrings</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\calves.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Calves')"
+        />
+        <div class="exercise-title">Calves</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\legpress.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Quadriceps')"
+        />
+        <div class="exercise-title">Quadriceps</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\traps.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Trapezius')"
+        />
+        <div class="exercise-title">Trapezius</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\shoulders.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Shoulders')"
+        />
+        <div class="exercise-title">Shoulders</div>
+      </div>
+
+      <div class="exercise-container">
+        <img
+          src="exercise_images\squat.jpg"
+          class="exercise-card"
+          onclick="loadExercises('Glutes')"
+        />
+        <div class="exercise-title">Glutes</div>
+      </div>
+    </div>
+
+    <div id="exercise-list" class="exercise-list"></div>
+  </section>
+  <script>
+    let exerciseData = [];
+
+    function filterByGroup(group) {
+      return exerciseData.filter((exercise) => exercise.Muscles == group);
+    }
+
+    function filterByDifficulty(diffculty) {
+      return exerciseData.filter(
+        (exercise) => exercise.Intensity_Level == diffculty
+      );
+    }
+
+    function loadExercises(group) {
+      const container = document.querySelector("#catalogue-container");
+      const exerciseList = document.querySelector("#exercise-list");
+
+      exerciseList.addEventListener("mousedown", () => {
+        container.style.transform = "translateX(0px)";
+        exerciseList.style.transform = "translateX(0px)";
+      });
+
+      container.style.transform = "translateX(-2000px)";
+      exerciseList.style.transform = "translateX(-2000px)";
+    }
+
+    async function populateData() {
+      const data = await fetch("exerciseData.json");
+      return await data.json();
+    }
+
+    async function initData() {
+      exerciseData = await populateData();
+      console.log(exerciseData);
+    }
+
+    initData();
+  </script>
+</html>
