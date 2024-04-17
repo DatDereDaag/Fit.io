@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exerciseCatalogue.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Electrolize&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Current Time and Date</title>
     <div class="login-header">Fit.io</div>
     <style>
@@ -10,13 +21,13 @@
         font-family: "HindSight2020";
         src: url("Hindsight 2020.otf") format("opentype");
       }
-        h1 {
-            font-family: "Electrolize", sans-serif;
-            font-size: 36px;
-            font-weight: bold;
-            font-style: oblique;
-            color: black;
-        }
+      h1 {
+        font-family: "Electrolize", sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        font-style: oblique;
+        color: black;
+      }
       .login-header {
         width: 500px;
         margin-bottom: 10px;
@@ -27,129 +38,131 @@
         font-weight: 500;
       }
 
-        input {
-            box-sizing: border-box;
-            width: 300px;
-            height: 40px;
-            border-radius: 5px;
-            font-size: 18px;
-            font-family: "Electrolize", sans-serif;
-            font-weight: 500;
-            padding: 15px 22px 14px 45px;
+      input {
+        box-sizing: border-box;
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family: "Electrolize", sans-serif;
+        font-weight: 500;
+        padding: 15px 22px 14px 45px;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: url("https://img.freepik.com/free-photo/red-swirl-with-word-red-it_1340-27374.jpg?t=st=1712725172~exp=1712728772~hmac=8230ef68f2e3a18442313cb5de5b2b98e64e183a9b89a927a833bf53402a7af2&w=996");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right bottom; /* Adjust this line to change the position */
+      }
+
+      li {
+        float: left;
+        transition: transform 0.3s;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+
+      li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: transform 0.3s, color 0.3s, font-weight 0.3s;
+        color: black;
+        border-radius: 30px;
+        background-color: lightgray;
+        font-family: "Electrolize", sans-serif;
+        font-weight: 500;
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background: rgb(185, 10, 10);
+        background: radial-gradient(
+          circle,
+          rgba(185, 10, 10, 0.6195728291316527) 0%,
+          rgba(194, 32, 32, 1) 33%,
+          rgba(139, 0, 0, 1) 85%
+        );
+        border: none;
+        border-radius: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all 0.5s ease;
+      }
+
+      li a:hover:not(.active) {
+        background: rgb(218, 67, 67);
+      }
+
+      li a:active {
+        background: rgb(218, 67, 67);
+        box-shadow: 0 5px #666;
+        transform: translateY(8px);
+      }
+
+      .active {
+        background-color: gray;
+      }
+
+      /* Animation for clock */
+      #datetime {
+        font-size: 48px;
+        text-align: center;
+        margin-top: 50px;
+        color: white;
+        animation: glow 2s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff5722,
+            0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 60px #ff5722,
+            0 0 70px #ff5722;
         }
-
-        ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: url('https://img.freepik.com/free-photo/red-swirl-with-word-red-it_1340-27374.jpg?t=st=1712725172~exp=1712728772~hmac=8230ef68f2e3a18442313cb5de5b2b98e64e183a9b89a927a833bf53402a7af2&w=996');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right bottom; /* Adjust this line to change the position */
-}
-
-
-        li {
-            float: left;
-            transition: transform 0.3s;
-            border-radius: 10px;
-            margin-right: 10px;
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #ff5722, 0 0 40px #ff5722,
+            0 0 50px #ff5722, 0 0 60px #ff5722, 0 0 70px #ff5722,
+            0 0 80px #ff5722;
         }
-
-        li a {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: transform 0.3s, color 0.3s, font-weight 0.3s;
-            color: black;
-            border-radius: 30px;
-            background-color: lightgray;
-            font-family: "Electrolize", sans-serif;
-            font-weight: 500;
-            padding: 15px 25px;
-            font-size: 24px;
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            color: #fff;
-            background: rgb(185, 10, 10);
-            background: radial-gradient(
-                circle,
-                rgba(185, 10, 10, 0.6195728291316527) 0%,
-                rgba(194, 32, 32, 1) 33%,
-                rgba(139, 0, 0, 1) 85%
-            );
-            border: none;
-            border-radius: 15px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            transition: all 0.5s ease;
-        }
-
-        li a:hover:not(.active) {
-            background: rgb(218, 67, 67);
-        }
-
-        li a:active {
-            background: rgb(218, 67, 67);
-            box-shadow: 0 5px #666;
-            transform: translateY(8px);
-        }
-
-        .active {
-            background-color: gray;
-        }
-
-        /* Animation for clock */
-        #datetime {
-            font-size: 48px;
-            text-align: center;
-            margin-top: 50px;
-            color: white;
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 60px #ff5722, 0 0 70px #ff5722;
-            }
-            to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #ff5722, 0 0 40px #ff5722, 0 0 50px #ff5722, 0 0 60px #ff5722, 0 0 70px #ff5722, 0 0 80px #ff5722;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <ul>
-        <li><a href="#" class="login-button">Home</a></li>
-        <li><a href="#" class="login-button">Page 1</a></li>
-        <li><a href="#" class="login-button">Page 2</a></li>
-        <li id="clock-tab"><a href="#" class="login-button">Clock</a></li> <!-- Added clock tab -->
+      <li><a href="#" class="login-button">Home</a></li>
+      <li><a href="#" class="login-button">Page 1</a></li>
+      <li><a href="#" class="login-button">Page 2</a></li>
+      <li id="clock-tab"><a href="#" class="login-button">Clock</a></li>
+      <!-- Added clock tab -->
     </ul>
 
     <div id="datetime"></div>
 
     <script>
-        // Function to update the time and date
-        function updateDateTime() {
-            var currentDate = new Date(); // Create a new Date object
-            var dateTimeString = currentDate.toLocaleString(); // Convert the date to a locale-specific string
-            document.getElementById('datetime').innerHTML = dateTimeString; // Update the HTML element with the current date and time
-        }
+      function updateDateTime() {
+        let currentDate = new Date();
+        let dateTimeString = currentDate.toLocaleString();
+        document.getElementById("datetime").innerHTML = dateTimeString;
+      }
 
-        // Call the function initially to display the current time and date
-        updateDateTime();
+      updateDateTime();
 
-        // Update the time and date only when the "Clock" tab is clicked
-        document.getElementById('clock-tab').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            updateDateTime(); // Update the time and date
+      document
+        .getElementById("clock-tab")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          updateDateTime();
         });
 
-        // Update the time and date every second
-        setInterval(updateDateTime, 1000);
+      setInterval(updateDateTime, 1000);
     </script>
-</body>
+  </body>
 </html>

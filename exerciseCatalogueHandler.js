@@ -1,21 +1,9 @@
-let exerciseData = [];
-
-function filterByGroup(group) {
-  return exerciseData.filter((exercise) => exercise.Muscles == group);
-}
-
-function filterByDifficulty(diffculty) {
-  return exerciseData.filter(
-    (exercise) => exercise.Intensity_Level == diffculty
-  );
-}
-
 function openList() {
   const container = document.querySelector("#catalogue-container");
   const exerciseList = document.querySelector("#exercise-list");
 
   container.style.transform = "translateX(-2000px)";
-  exerciseList.style.transform = "translateX(-2000px)";
+  exerciseList.style.transform = "translateX(350px)";
 }
 
 function closeList() {
@@ -23,7 +11,7 @@ function closeList() {
   const exerciseList = document.querySelector("#exercise-list");
 
   container.style.transform = "translateX(0px)";
-  exerciseList.style.transform = "translateX(0px)";
+  exerciseList.style.transform = "translateX(2000px)";
 }
 
 function displayInfo(element) {
@@ -42,13 +30,8 @@ function displayInfo(element) {
   }
 }
 
-function loadExercises(group) {
-  const exerciseListCotainer = document.querySelector(
-    "#exercise-list-container"
-  );
-  const exercises = [...filterByGroup(group)];
+function getExerciseData(exercises) {
   let html = ``;
-
   for (let exercise of exercises) {
     html += `
 
@@ -78,34 +61,17 @@ function loadExercises(group) {
         </div>
           `;
   }
+  return html;
+}
+
+function loadExercises(group) {
+  const exerciseListCotainer = document.querySelector(
+    "#exercise-list-container"
+  );
+  const exercises = [...filterByGroup(group)];
+  let html = getExerciseData(exercises);
 
   exerciseListCotainer.innerHTML = html;
 
   openList();
 }
-
-async function getExerciseData() {
-  const url = "https://work-out-api1.p.rapidapi.com/search";
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "f3f7425e2cmshe5260b3af03762cp12b226jsn32bc146c795b",
-      "X-RapidAPI-Host": "work-out-api1.p.rapidapi.com",
-    },
-  };
-
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log("Data returned");
-    return result;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-async function initData() {
-  exerciseData = await getExerciseData();
-}
-
-initData();

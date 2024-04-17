@@ -1,0 +1,240 @@
+body {
+  overflow: hidden;
+}
+.setup-container {
+  margin-top: 50px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 87%;
+  height: 500px;
+}
+
+.routine-setup-box {
+  position: absolute;
+  background: rgb(247, 247, 247);
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 52%,
+    rgba(231, 228, 228, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  height: 620px;
+  width: 700px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.setup-prompt {
+  text-align: center;
+  font-family: "Electrolize", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.setup-info-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 238, 238);
+  background: radial-gradient(
+    circle,
+    rgba(255, 238, 238, 1) 52%,
+    rgba(209, 180, 180, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.setup-info {
+  text-indent: -102px;
+  padding-left: 102px;
+  font-family: "Electrolize", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 130%;
+  word-spacing: 1.5px;
+  letter-spacing: 0.3px;
+}
+
+.setup-button-container {
+  padding: 15px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.setup-button {
+  padding: 15px;
+  background: rgb(185, 10, 10);
+  background: radial-gradient(
+    circle,
+    rgba(185, 10, 10, 0.6195728291316527) 0%,
+    rgba(194, 32, 32, 1) 33%,
+    rgba(139, 0, 0, 1) 85%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  font-size: 32px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.setup-button:hover {
+  cursor: pointer;
+  background: rgb(234, 84, 84);
+  background: radial-gradient(
+    circle,
+    rgba(234, 84, 84, 1) 0%,
+    rgba(210, 33, 55, 1) 51%,
+    rgba(154, 17, 17, 1) 100%
+  );
+  scale: 1.15;
+}
+
+.setup-button:active {
+  transform: translateY(10px);
+  box-shadow: 0 5px #666;
+}
+
+.exercise-setup {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background: rgb(247, 247, 247);
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 52%,
+    rgba(231, 228, 228, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  height: 620px;
+  width: 1200px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  transform: translateX(1500px);
+  transition: all 1s ease-in-out;
+  gap: 10px;
+}
+
+.day-select {
+  display: flex;
+  flex-direction: column;
+  height: 101%;
+  margin-top: -5px;
+  margin-left: -5px;
+  width: 30%;
+  background: rgb(234, 84, 84);
+  background: radial-gradient(
+    circle,
+    rgba(234, 84, 84, 1) 0%,
+    rgba(210, 33, 55, 1) 51%,
+    rgba(154, 17, 17, 1) 100%
+  );
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.exercise-select {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  height: inherit;
+  width: 70%;
+  padding: 20px 50px 50px 20px;
+  gap: 20px;
+}
+
+.exercise {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 20px;
+}
+
+.exercise-top {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.exercise-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.confirm-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  right: 200px;
+  font-size: 20px;
+}
+
+.day {
+  background-color: rgba(252, 43, 47, 0.3);
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  padding: 10px 10px 10px 25px;
+  font-size: 32px;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: -1px;
+  border-bottom: solid 0.5px white;
+  transition: all 0.5s ease;
+}
+
+.rest-day {
+  background-color: rgba(75, 18, 19, 0.542);
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  padding: 10px 10px 10px 25px;
+  font-size: 32px;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: -1px;
+  border-bottom: solid 0.5px white;
+}
+
+.rest-day:hover {
+  cursor: not-allowed;
+}
+
+.day-selected {
+  background-color: rgba(255, 164, 165, 0.8);
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  padding: 20px 10px 20px 50px;
+  font-size: 36px;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: 1px;
+  border-bottom: solid 0.5px white;
+  transition: all 0.5s ease;
+}
+
+.day:hover {
+  cursor: pointer;
+  background-color: rgba(255, 179, 180, 0.5);
+  letter-spacing: 1px;
+  padding-left: 50px;
+}
