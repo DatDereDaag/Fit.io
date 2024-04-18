@@ -6,7 +6,7 @@ section {
   margin-top: 100px;
 }
 
-.material-icons:hover {
+.material-icons-hover:hover {
   cursor: pointer;
   background: red;
   color: white;

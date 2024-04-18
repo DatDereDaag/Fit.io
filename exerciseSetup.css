@@ -1,6 +1,12 @@
 body {
   overflow: hidden;
 }
+
+select {
+  font-size: 16px;
+  font-family: "Electrolize", sans-serif;
+}
+
 .setup-container {
   margin-top: 50px;
   padding: 100px;
@@ -143,6 +149,8 @@ body {
     rgba(210, 33, 55, 1) 51%,
     rgba(154, 17, 17, 1) 100%
   );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border: 2px solid gray;
   border-radius: 5px;
 }
@@ -154,26 +162,111 @@ body {
   height: inherit;
   width: 70%;
   padding: 20px 50px 50px 20px;
-  gap: 20px;
+  gap: 12px;
 }
 
 .exercise {
+  margin-right: 50px;
   display: flex;
   flex-direction: column;
+  font-family: "Electrolize", sans-serif;
   color: black;
-  font-size: 20px;
+}
+
+.exercise-number {
+  color: white;
+  border: 1px solid black;
+  background: rgb(234, 84, 84);
+  background: radial-gradient(
+    circle,
+    rgba(234, 84, 84, 1) 0%,
+    rgba(210, 33, 55, 1) 51%,
+    rgba(182, 0, 0, 1) 100%
+  );
+  padding: 7px 12px 12px 12px;
+  margin-right: 5px;
+  font-size: 18px;
+  font-style: oblique;
+  font-weight: bold;
+  border-radius: 100%;
 }
 
 .exercise-top {
+  clip-path: polygon(0 0, 94% 0, 100% 100%, 3% 100%);
+  width: 600px;
+  height: 36px;
+  padding: 2px;
+  padding-left: 20px;
+  padding-right: 30px;
+  background: rgb(247, 245, 245);
+  background: radial-gradient(
+    circle,
+    rgba(247, 245, 245, 1) 30%,
+    rgba(226, 226, 226, 1) 100%
+  );
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .exercise-bottom {
+  clip-path: polygon(0 0, 94% 0, 100% 100%, 3% 100%);
+  margin-left: 120px;
+  width: 560px;
+  height: 36px;
+  padding: 2px;
+  padding-bottom: -5px;
+  padding-left: 20px;
+  background: rgb(234, 84, 84);
+  background: radial-gradient(
+    circle,
+    rgba(234, 84, 84, 1) 0%,
+    rgba(210, 33, 55, 1) 51%,
+    rgba(182, 0, 0, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  color: white;
   display: flex;
   flex-direction: row;
+  font-size: 20px;
   gap: 10px;
+}
+
+.catalogue-button {
+  position: relative;
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  letter-spacing: 0.5px;
+  background: rgb(185, 10, 10);
+  background: radial-gradient(
+    circle,
+    rgba(185, 10, 10, 0.6195728291316527) 0%,
+    rgba(194, 32, 32, 1) 33%,
+    rgba(139, 0, 0, 1) 85%
+  );
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  transition: all 1s ease;
+}
+
+.catalogue-button:hover {
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  background: rgb(222, 35, 35);
+}
+
+.catalogue-button:active {
+  background: rgb(218, 67, 67);
+  box-shadow: 0 5px #5d5d5d;
+  transform: translateY(8px);
 }
 
 .confirm-button {

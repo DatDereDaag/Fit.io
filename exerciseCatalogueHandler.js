@@ -56,7 +56,7 @@ function getExerciseData(exercises) {
           </div>
           <div class = "exercise-info">
             <p class = "card-back">${exercise.Explaination}</p>
-            <a href = "${exercise.Video}">Youtube Videos</a>
+            <a target="_blank" href = "${exercise.Video}">Youtube Videos</a>
           </div>
         </div>
           `;

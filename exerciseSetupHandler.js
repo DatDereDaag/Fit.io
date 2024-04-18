@@ -32,11 +32,21 @@ function checkRoutine() {
 
     //Check for empty routines or missing exercises
     let routine = routineSelected[i];
-    if (routine.length != 6) return;
+    if (routine.length != 6) {
+      alert(
+        "You must select 6 exercises for each non rest day.A green tick will display next to days with a complete routine."
+      );
+      return;
+    }
 
     for (let exercise of routine) {
       //Check for missing exercises
-      if (exercise == null) return;
+      if (exercise == null) {
+        alert(
+          "You must select 6 exercises for each non rest day.A green tick will display next to days with a complete routine."
+        );
+        return;
+      }
     }
   }
 
@@ -46,6 +56,7 @@ function checkRoutine() {
 //TODO:IMPLEMENT LOGIC WITH FIRESTORE TO STORE routineSelected ARRAY
 function submitRoutine() {
   console.log("Saving routine");
+  console.log(routineSelected);
 }
 
 function showCatalogue(group) {
@@ -134,6 +145,36 @@ function loadOptions(group) {
   return html;
 }
 
+function checkIfComplete(routine, day) {
+  if (routine.length != 6) return;
+  for (let exercise of routine) {
+    if (exercise == null) return;
+  }
+
+  let daySelected = document.querySelector("#day-select").children[day];
+
+  daySelected.innerHTML = `${getDay(
+    day
+  )}<i class="material-icons" style = "padding: 5px; font-size:40px; color:#15d63c;">check_circle</i> `;
+}
+
+function setExercise(index, element, day) {
+  const exerciseSelect = document.querySelector("#exercise-select");
+  const chosenExericse =
+    exerciseSelect.children[index].querySelector("#chosen-exercise");
+
+  if (element.children[0].value == -1) {
+    element.removeChild(element.firstElementChild);
+  }
+
+  let routine = routineSelected[day];
+  routine[index] = element.value;
+
+  checkIfComplete(routine, day);
+
+  chosenExericse.innerHTML = `Chosen: ${element.value}`;
+}
+
 function loadExerciseTemplate(routine, container, day) {
   container.innerHTML = ``;
 
@@ -141,14 +182,17 @@ function loadExerciseTemplate(routine, container, day) {
     container.innerHTML += `
           <div class="exercise">
             <div class="exercise-top">
-              ${getMuscleGroup(routine, i)}
+              <div style = "display:flex"> <div class="exercise-number">${
+                i + 1
+              }</div>   ${getMuscleGroup(routine, i).toUpperCase()} : </div>
               <select
                 id="exercise-options"
-                onchange="setExercise(${i}, this.value, ${day})"
+                onchange="setExercise(${i}, this, ${day})"
               >
+                <option value = "-1">select an exercise</option>             
                 ${loadOptions(`${getMuscleGroup(routine, i)}`)}
               </select>
-              <button onclick="showCatalogue('${getMuscleGroup(
+              <button class="catalogue-button" onclick="showCatalogue('${getMuscleGroup(
                 routine,
                 i
               )}')">Show Catalogue</button>
@@ -177,17 +221,6 @@ function setActiveDay(element) {
   dateSelect.setAttribute("date-selected", day);
 
   loadExerciseTemplate(routine, exerciseSelect, day);
-}
-
-function setExercise(index, value, day) {
-  const exerciseSelect = document.querySelector("#exercise-select");
-  const chosenExericse =
-    exerciseSelect.children[index].querySelector("#chosen-exercise");
-
-  let routine = routineSelected[day];
-  routine[index] = value;
-
-  chosenExericse.innerHTML = `Chosen: ${value}`;
 }
 
 function loadPPLTemplate() {
