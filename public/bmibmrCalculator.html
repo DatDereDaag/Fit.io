@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="main-container" id="main-nav"></div>
+  <div class="main-container" id="main-body">
+    <div class="body-container" id="bmi">
+      <div class="form-heading">BMI</div>
+      <div class="form-box">
+        <form>
+          <div class="subform-box">
+            <label>Weight in kilograms:</label> <br />
+            <label>Height in centimeters:</label>
+          </div>
+          <div class="subform-box">
+            <input type="text" placeholder="enter value" id="i-kgs" /> <br />
+            <input type="text" placeholder="enter value" id="i-cms" /> <br />
+            <div class="results-field" id="bmi-results"></div>
+          </div>
+        </form>
+      </div>
+      <div class="submit-box">
+        <button id="submit-bmi" onclick="calculateBMI()">Calculate</button>
+      </div>
+    </div>
+
+    <div class="body-container" id="bmr">
+      <div class="form-heading">BMR</div>
+      <div class="form-box">
+        <form>
+          <div class="subform-box">
+            <label>Weight in kilograms:</label> <br />
+            <label>Height in centimeters:</label> <br />
+            <label>Age:</label> <br />
+            <label>Sex:</label>
+          </div>
+          <div class="subform-box">
+            <input type="text" placeholder="enter value" id="r-kgs" /> <br />
+            <input type="text" placeholder="enter value" id="r-cms" /> <br />
+            <input type="text" placeholder="enter value" id="r-age" /> <br />
+            <select id="r-sex">
+              <option value="1">male</option>
+              <option value="2">female</option>
+            </select>
+            <br />
+            <div class="results-field" id="bmr-results"></div>
+          </div>
+        </form>
+      </div>
+      <div class="submit-box">
+        <button id="submit-bmr" onclick="calculateBMR()">Calculate</button>
+      </div>
+    </div>
+  </div>
+</div>

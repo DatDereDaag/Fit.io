@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exerciseCatalogue.css" />
+    <link rel="stylesheet" href="exerciseSetup.css" />
+    <link rel="stylesheet" href="bmibmrCalculator.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Electrolize&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+
+    <style>
+      @font-face {
+        font-family: "HindSight2020";
+        src: url("Hindsight 2020.otf") format("opentype");
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        box-sizing: border-box;
+        width: 102.5%;
+        height: 85px;
+        padding: 15px;
+        margin-left: -10px;
+        margin-top: -10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        background: rgb(234, 84, 84);
+        background: radial-gradient(
+          circle,
+          rgba(234, 84, 84, 1) 0%,
+          rgba(210, 33, 55, 1) 51%,
+          rgba(182, 0, 0, 1) 100%
+        );
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        gap: 5px;
+      }
+
+      .logo {
+        color: white;
+        padding-left: 10px;
+        left: 20px;
+        position: absolute;
+        font-size: 55px;
+        font-family: "Hindsight2020";
+        font-weight: lighter;
+        font-style: oblique;
+        letter-spacing: 0.5px;
+      }
+
+      .login-details {
+        left: 225px;
+
+        position: absolute;
+        font-size: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .login-state {
+        color: white;
+        font-family: "Electrolize", sans-serif;
+        font-weight: lighter;
+        font-style: oblique;
+        letter-spacing: 0.5px;
+      }
+
+      .signout-button {
+        position: relative;
+        height: 30px;
+        width: 100px;
+        color: white;
+        font-family: "Electrolize", sans-serif;
+        font-weight: bold;
+        font-style: oblique;
+        letter-spacing: 0.5px;
+        background: rgb(185, 10, 10);
+        background: radial-gradient(
+          circle,
+          rgba(185, 10, 10, 0.6195728291316527) 0%,
+          rgba(194, 32, 32, 1) 33%,
+          rgba(139, 0, 0, 1) 85%
+        );
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+          rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 16px;
+        transition: all 1s ease;
+      }
+
+      .signout-button:hover {
+        background: red;
+        letter-spacing: 2px;
+        scale: 1.05;
+        cursor: pointer;
+      }
+
+      .signout-button:active {
+        transform: translateY(8px);
+      }
+
+      .nav-item {
+        height: 35px;
+        margin-top: -27px;
+        margin-right: -10px;
+        color: white;
+        background: rgb(185, 10, 10);
+        background: radial-gradient(
+          circle,
+          rgba(185, 10, 10, 0.6195728291316527) 0%,
+          rgba(194, 32, 32, 1) 33%,
+          rgba(139, 0, 0, 1) 85%
+        );
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px;
+        border: 1px solid white;
+        border-bottom: none;
+        padding: 28px;
+        padding-top: 32px;
+        font-size: 24px;
+        font-family: "Hindsight2020";
+        font-weight: light;
+        font-style: oblique;
+        word-spacing: 1px;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        padding: 5;
+        transition: all 0.5s ease;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+        background: red;
+        font-style: none;
+        font-weight: lighter;
+        letter-spacing: 5px;
+        word-spacing: 3px;
+        border-radius: 10px;
+      }
+
+      .content {
+        margin-top: -50px;
+      }
+
+      .top-content {
+        box-sizing: border-box;
+        z-index: -4;
+        position: absolute;
+        height: 500px;
+        width: 120%;
+        margin-top: -100px;
+        margin-left: -20px;
+        background: rgb(214, 45, 45);
+        background: radial-gradient(
+          circle,
+          rgba(214, 45, 45, 0.40388655462184875) 22%,
+          rgba(232, 119, 119, 1) 78%,
+          rgba(190, 34, 34, 1) 100%
+        );
+        mix-blend-mode: multiply;
+      }
+
+      .top-image {
+        z-index: -1;
+        position: absolute;
+        margin-left: -10px;
+        width: 100%;
+        height: 400px;
+        background-image: url("https://img.freepik.com/free-photo/red-abstract-plastic-bag-concept_23-2148549004.jpg?t=st=1713540087~exp=1713543687~hmac=479ae99dadbdf44f27371faa2b623b85b562f082510254678824049af072b32a&w=1380");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+      }
+
+      .bottom-content {
+        box-sizing: border-box;
+        padding: 10px;
+
+        background: rgb(247, 245, 245);
+        background: radial-gradient(
+          circle,
+          rgba(247, 245, 245, 0.7) 30%,
+          rgba(226, 226, 226, 0.7) 100%
+        );
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+          rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+          rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        margin-left: -143px;
+        height: 350px;
+        width: 120%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .time {
+        color: black;
+        font-size: 70px;
+        font-family: "Black Ops One", system-ui;
+        font-weight: bold;
+        font-style: oblique;
+        letter-spacing: 1px;
+      }
+
+      .date {
+        color: black;
+        font-size: 60px;
+        font-style: oblique;
+        font-weight: bolder;
+        font-family: "Electrolize", sans-serif;
+        letter-spacing: 1.5px;
+      }
+
+      .routine {
+        color: black;
+        font-size: 60px;
+        font-style: oblique;
+        font-weight: lighter;
+        text-align: center;
+        letter-spacing: px;
+        padding: 20px;
+        font-family: "Black Ops One", system-ui;
+      }
+
+      .daytime-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        gap: 11px;
+      }
+
+      .routine-list-card {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        height: 280px;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: rgb(234, 84, 84);
+        background: radial-gradient(
+          circle,
+          rgba(234, 84, 84, 1) 0%,
+          rgba(244, 27, 54, 1) 51%,
+          rgba(167, 17, 17, 1) 100%
+        );
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        transition: all 1s ease;
+        scale: 1.02;
+      }
+
+      .routine-info {
+        margin-top: 65px;
+        font-size: 18px;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(500px);
+        transition: all 1s ease;
+      }
+
+      .routine-title {
+        font-family: "Black Ops One", system-ui;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 21px;
+        letter-spacing: -0.5px;
+        line-height: 100%;
+        text-align: center;
+      }
+
+      .routine-front {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .routine-back {
+        font-weight: 500;
+        letter-spacing: 0.6px;
+        line-height: 130%;
+        word-spacing: 1px;
+        font-style: oblique;
+      }
+
+      .routine-list-card:hover {
+        z-index: 2;
+        scale: 1.5;
+        transform: translateY(-70px);
+        cursor: pointer;
+      }
+
+      .routine-list-card:nth-child(1):hover {
+        z-index: 2;
+        scale: 1.5;
+        transform: translateY(-70px) translateX(30px);
+        cursor: pointer;
+      }
+
+      .routine-list-card:nth-child(6):hover {
+        z-index: 2;
+        scale: 1.5;
+        transform: translateY(-70px) translateX(-30px);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Fit.io</div>
+      <div class="login-details">
+        <div id="loginState" class="login-state"></div>
+        <button id="signoutButton" class="signout-button">Sign Out</button>
+      </div>
+      <div class="nav-item" class="login-button" onclick="loadHomepage()">
+        Home
+      </div>
+      <div
+        class="nav-item"
+        class="login-button"
+        onclick="navigate(`Exercise Catalgoue`, `exerciseCatalogue.html` )"
+      >
+        Exercise Catalogue
+      </div>
+      <div
+        class="nav-item"
+        class="login-button"
+        onclick="navigate(`Routine Setup`, `exerciseSetup.html` )"
+      >
+        Routine Setup
+      </div>
+      <div
+        class="nav-item"
+        class="login-button"
+        onclick="navigate(`bmi`, `bmibmrCalculator.html` )"
+      >
+        bmr/bmi calc
+      </div>
+      <a class="nav-item" class="login-button" href="login.html"> Login </a>
+    </nav>
+
+    <section id="content" class="content">
+      <div class="top-content"></div>
+      <div class="top-image"></div>
+      <div class="daytime-container">
+        <div id="time" class="time"></div>
+        <div id="day" class="date"></div>
+        <div id="routine" class="routine">
+          LOGIN TO CREATE YOUR ROUTINE, IF YOU ARE LOGGED IN PLEASE PRESS CLICK
+          ON ROUTINE SETUP TO BEGIN DESIGNING YOUR ROUTINE
+        </div>
+      </div>
+
+      <div id="cards" class="bottom-content"></div>
+    </section>
+
+    <script>
+      let list;
+      let routineName;
+      console.log(list);
+      function loadHomepage() {
+        document.querySelector("#content").innerHTML = `
+      <div class="top-content"></div>
+      <div class="top-image"></div>
+      <div class="daytime-container">
+        <div id="time" class="time"></div>
+        <div id="day" class="date"></div>
+        <div id="routine" class="routine">${
+          routineName ? routineName : " "
+        } Routine</div>
+      </div>
+
+      <div id="cards" class="bottom-content">
+          ${list ? list : " "}
+        </div>`;
+      }
+
+      function getUserRoutine(exercises) {
+        let html = ``;
+        for (let exercise of exercises) {
+          html += `
+
+        <div class = "routine-list-card" data-isClicked = "false" onclick = "displayInfo(this)">
+          <h1 class ="routine-title">${exercise.WorkOut.toUpperCase()}</h1>
+          <div>
+            <h2 class = "routine-front
+            ">Difficulty: ${exercise.Intensity_Level}</h2>
+            <h2 class = "routine-front
+            ">Beginner Sets: ${exercise["Beginner Sets"]}</h2>
+            <h2 class = "routine-front
+            ">Intermediate Sets: ${exercise["Intermediate Sets"]}</h2>
+            <h2 class = "routine-front
+            ">Expert Sets: ${exercise["Expert Sets"]}</h2>
+            <h2 class = "routine-front
+            ">Equipment: ${
+              exercise.Equipment ? exercise.Equipment : "None"
+            }</h2>
+          </div>
+          <div class = "routine-info
+          ">
+            <p class = "routine-back">${exercise.Explaination}</p>
+            <a target="_blank" href = "${exercise.Video}">Youtube Videos</a>
+          </div>
+        </div>
+          `;
+        }
+        return html;
+      }
+
+      userGeneratedRoutine = routine;
+      function loadUserRoutine(routine) {
+        let userGeneratedRoutine = routine;
+        console.log(routine);
+
+        let currentRoutine;
+        let filteredRoutine = [];
+
+        let now = new Date();
+        let current_day = now.toLocaleString("default", { weekday: "long" });
+
+        routineName = routine.split[getDayIndex(current_day)];
+
+        document.querySelector("#routine").innerHTML = `${
+          routine.split[getDayIndex(current_day)]
+        } Routine`;
+
+        current_day = current_day.toLowerCase();
+
+        switch (current_day) {
+          case "monday":
+            currentRoutine = routine.monday;
+            break;
+          case "tuesday":
+            currentRoutine = routine.tuesday;
+            break;
+          case "wednesday":
+            currentRoutine = routine.wednesday;
+            break;
+          case "thursday":
+            currentRoutine = routine.thursday;
+            break;
+          case "friday":
+            currentRoutine = routine.friday;
+            break;
+          case "saturday":
+            currentRoutine = routine.saturday;
+            break;
+          case "sunday":
+            currentRoutine = routine.sunday;
+            break;
+        }
+
+        for (let exercise of currentRoutine) {
+          filteredRoutine.push(filterByName(exercise));
+        }
+
+        document.querySelector("#cards").innerHTML =
+          getUserRoutine(filteredRoutine);
+
+        list = getUserRoutine(filteredRoutine);
+      }
+
+      function updateDateTime() {
+        let now = new Date();
+
+        let day = now.toLocaleString("default", { weekday: "long" });
+        let time = now.toLocaleTimeString();
+
+        document.getElementById("day").innerHTML = day;
+        document.getElementById("time").innerHTML = time;
+      }
+
+      setInterval(updateDateTime, 1000);
+
+      async function navigate(title, url) {
+        if (title == "home") {
+          loadHomepage();
+          return;
+        }
+
+        document.title = title;
+        const content = document.querySelector("#content");
+
+        if (
+          url == "exerciseSetup.html" &&
+          document.querySelector("#loginState").innerHTML == "Not logged in"
+        ) {
+          content.innerHTML = `
+          <div
+          style="
+          position: absolute;
+          left: 30%;
+          top: 40%;
+          font-size: 50px;
+          "
+          >
+            LOGIN TO DISPLAY THIS PAGE
+          </div>`;
+          return;
+        }
+
+        let response = await fetch(url);
+        let html = await response.text();
+        content.innerHTML = await html;
+      }
+    </script>
+    <script src="main.js"></script>
+    <script src="exerciseCatalogueHandler.js" defer></script>
+    <script src="exerciseSetupHandler.js"></script>
+    <script src="bmibmrCalculator.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import {
+        getAuth,
+        onAuthStateChanged,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+      import {
+        getFirestore,
+        collection,
+        doc,
+        getDoc,
+        addDoc,
+        getDocs,
+        setDoc,
+        query,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+      import firebaseConfig from "./firebaseConfig.js";
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      const logoutButton = document.querySelector("#signoutButton");
+      logoutButton.addEventListener("click", logout);
+
+      async function logout() {
+        onAuthStateChanged(auth, (user) => {
+          if (!user) {
+            alert("Logged out");
+            window.location.replace("index.html");
+          }
+        });
+
+        await signOut(auth);
+      }
+
+      let uid;
+      async function monitorAuthState() {
+        onAuthStateChanged(auth, async (user) => {
+          if (user) {
+            //STORE USER DATA
+            const docRef = doc(db, `users/${user.uid}`);
+
+            const userData = {
+              userId: user.uid,
+              monday: await [...routineSelected[0]],
+              tuesday: await [...routineSelected[1]],
+              wednesday: await [...routineSelected[2]],
+              thursday: await [...routineSelected[3]],
+              friday: await [...routineSelected[4]],
+              saturday: await [...routineSelected[5]],
+              sunday: await [...routineSelected[6]],
+              split: await [...routineSelected[7]],
+            };
+
+            if (routineSelected[0].length != 0) {
+              try {
+                await setDoc(docRef, userData);
+              } catch (error) {
+                console.log(error);
+              }
+            }
+
+            //RETRIEVE USER DATA
+            const mySnapshot = await getDoc(docRef);
+
+            if (mySnapshot.exists()) {
+              const docData = mySnapshot.data();
+              loadUserRoutine(docData);
+            }
+
+            //CHANGE UI
+            document.getElementById("loginState").innerHTML =
+              "Logged in as " + user.email;
+          } else {
+            document.getElementById("loginState").innerHTML = "Not logged in";
+          }
+        });
+      }
+
+      document.addEventListener("submit", monitorAuthState);
+      monitorAuthState();
+    </script>
+  </body>
+</html>

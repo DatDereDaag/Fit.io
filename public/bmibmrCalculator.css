@@ -1,0 +1,145 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "HindSight2020";
+  src: url("public/Hindsight\ 2020.otf") format("opentype");
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.main-container {
+  width: 100%;
+}
+
+#main-nav {
+  flex: 0 1 100px;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#home-button button {
+  height: fit-content;
+  width: fit-content;
+
+  background-color: white;
+  font-family: "Hindsight2020";
+  font-size: 40px;
+  border: none;
+}
+
+#home-button button:hover {
+  text-decoration: underline;
+  color: rgb(185, 10, 10);
+}
+
+#main-body {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.body-container {
+  height: 430px;
+  width: 500px;
+
+  background: rgb(247, 247, 247);
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 52%,
+    rgba(231, 228, 228, 1) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 20px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.body-container div {
+  flex: 1 1 auto;
+}
+
+.form-heading {
+  text-align: center;
+  font-family: "Electrolize", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+
+  font-family: "Electrolize", sans-serif;
+}
+
+.subform-box {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.results-field {
+  height: 50px;
+  width: 100px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  padding-top: 10px;
+
+  font-family: "Electrolize", sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.submit-box button {
+  padding: 10px;
+  background: rgb(185, 10, 10);
+  background: radial-gradient(
+    circle,
+    rgba(185, 10, 10, 0.6195728291316527) 0%,
+    rgba(194, 32, 32, 1) 33%,
+    rgba(139, 0, 0, 1) 85%
+  );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: white;
+  font-family: "Electrolize", sans-serif;
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.submit-box button:hover {
+  cursor: pointer;
+  background: rgb(234, 84, 84);
+  background: radial-gradient(
+    circle,
+    rgba(234, 84, 84, 1) 0%,
+    rgba(210, 33, 55, 1) 51%,
+    rgba(154, 17, 17, 1) 100%
+  );
+  scale: 1.15;
+}

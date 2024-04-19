@@ -52,7 +52,7 @@ function checkRoutine() {
 
   const submit = new Event("submit");
   document.dispatchEvent(submit);
-  window.location.replace("index.html");
+  navigate("home", "index.html");
 }
 
 function showCatalogue(group) {

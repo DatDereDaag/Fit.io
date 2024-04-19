@@ -138,7 +138,9 @@
             email,
             password
           );
-          alert("New Account Created, welcome!");
+          alert(
+            "New Account Created, welcome! Please press LOGIN to continue."
+          );
         } catch (error) {
           console.log(error.message);
           showError(error.code);

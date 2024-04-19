@@ -19,6 +19,29 @@ function getDay(value) {
   }
 }
 
+function getDayIndex(value) {
+  switch (value) {
+    case "Monday":
+      return 0;
+    case "Tuesday":
+      return 1;
+    case "Wednesday":
+      return 2;
+    case "Thursday":
+      return 3;
+    case "Friday":
+      return 4;
+    case "Saturday":
+      return 5;
+    case "Sunday":
+      return 6;
+  }
+}
+
+function filterByName(name) {
+  return exerciseData.find((exercise) => exercise.WorkOut == name);
+}
+
 function filterByGroup(group) {
   return exerciseData.filter((exercise) => exercise.Muscles == group);
 }
@@ -49,14 +72,8 @@ async function getExerciseData() {
   }
 }
 
-async function getTestData() {
-  const data = await fetch("exerciseData.json");
-  return await data.json();
-}
-
 async function initData() {
-  //exerciseData = await getExerciseData();
-  exerciseData = await getTestData();
+  exerciseData = await getExerciseData();
 }
 
 initData();
