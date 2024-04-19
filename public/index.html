@@ -24,10 +24,6 @@
         src: url("Hindsight 2020.otf") format("opentype");
       }
 
-      body {
-        overflow-x: hidden;
-      }
-
       .navbar {
         box-sizing: border-box;
         width: 102.5%;
@@ -143,7 +139,7 @@
         border-bottom: none;
         padding: 28px;
         padding-top: 32px;
-        font-size: 24px;
+        font-size: 21px;
         font-family: "Hindsight2020";
         font-weight: light;
         font-style: oblique;
@@ -213,14 +209,17 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
           rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
           rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-        margin-left: -143px;
-        height: 350px;
-        width: 120%;
+
+        margin-left: 15px;
+        margin-bottom: 80px;
+        height: 360px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 10px;
+        transform: translateY(-30px);
       }
 
       .time {
@@ -333,14 +332,14 @@
       .routine-list-card:nth-child(1):hover {
         z-index: 2;
         scale: 1.5;
-        transform: translateY(-70px) translateX(30px);
+        transform: translateY(-70px) translateX(70px);
         cursor: pointer;
       }
 
       .routine-list-card:nth-child(6):hover {
         z-index: 2;
         scale: 1.5;
-        transform: translateY(-70px) translateX(-30px);
+        transform: translateY(-70px) translateX(-70px);
         cursor: pointer;
       }
     </style>

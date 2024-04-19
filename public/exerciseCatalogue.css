@@ -65,11 +65,11 @@ section {
 }
 
 .exercise-list {
+  top: 100px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  bottom: 10%;
-  transform: translateX(2000px);
+  transform: translateX(2000px) translateY(100px);
   height: 580px;
   width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -82,6 +82,7 @@ section {
 
 .exercise-list-bg {
   position: absolute;
+  transform: translateY(100px);
   height: 580px;
   width: 1000px;
   background-image: url("https://img.freepik.com/free-vector/red-background-curve_2065-107.jpg?t=st=1712906512~exp=1712910112~hmac=5e69302d52ff62f6d0d0226b1195f54cb7e8b0e31bf7b3e59fb5dcf07e3f0a03&w=740");
@@ -92,8 +93,8 @@ section {
 
 .exercise-list-container {
   z-index: 1;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 150px;
+  margin-left: -20px;
   padding: 10px;
   height: 550px;
   width: 930px;
