@@ -49,14 +49,8 @@ async function getExerciseData() {
   }
 }
 
-async function getTestData() {
-  const data = await fetch("exerciseData.json");
-  return await data.json();
-}
-
 async function initData() {
-  //exerciseData = await getExerciseData();
-  exerciseData = await getTestData();
+  exerciseData = await getExerciseData();
 }
 
 initData();

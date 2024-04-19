@@ -1,189 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="exerciseCatalogue.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <title>Exercise Catalogue</title>
-  </head>
-  <section id="#content">
-    <div id="catalogue-container" class="catalogue-container">
-      <div class="exercise-container">
-        <img
-          src="exercise_images\bicep-curl.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Biceps')"
-        />
-        <div class="exercise-title">Biceps</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\tricep-dip.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Triceps')"
-        />
-        <div class="exercise-title">Triceps</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\bench-press.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Chest')"
-        />
-        <div class="exercise-title">Chest</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\pull-up.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Back')"
-        />
-        <div class="exercise-title">Back</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\legs.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Legs')"
-        />
-        <div class="exercise-title">Legs</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\ab.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Abs')"
-        />
-        <div class="exercise-title">Abs</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\stretching.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Stretching')"
-        />
-        <div class="exercise-title">Stretching</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\warmup.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Warm Up')"
-        />
-        <div class="exercise-title">Warm Up</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\lats.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Lats')"
-        />
-        <div class="exercise-title">Lats</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\deadlift.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Hamstrings')"
-        />
-        <div class="exercise-title" style="right: -20px">Hamstrings</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\calves.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Calves')"
-        />
-        <div class="exercise-title">Calves</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\legpress.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Quadriceps')"
-        />
-        <div class="exercise-title">Quadriceps</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\traps.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Trapezius')"
-        />
-        <div class="exercise-title">Trapezius</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\shoulders.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Shoulders')"
-        />
-        <div class="exercise-title">Shoulders</div>
-      </div>
-
-      <div class="exercise-container">
-        <img
-          src="exercise_images\squat.jpg"
-          class="exercise-card"
-          onclick="loadExercises('Glutes')"
-        />
-        <div class="exercise-title">Glutes</div>
-      </div>
+<section id="#content">
+  <div id="catalogue-container" class="catalogue-container">
+    <div class="exercise-container">
+      <img
+        src="exercise_images\bicep-curl.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Biceps')"
+      />
+      <div class="exercise-title">Biceps</div>
     </div>
 
-    <div id="exercise-list" class="exercise-list">
-      <p
-        style="
-          position: absolute;
-          z-index: 1;
-          text-align: center;
-          margin-left: 40%;
-          font-style: oblique;
-        "
-      >
-        Image by ikatod on Freepik
-      </p>
-      <div class="exercise-list-bg"></div>
-      <i
-        id="close-list"
-        class="material-icons material-icons-hover"
-        style="
-          position: absolute;
-          top: 10px;
-          right: 15px;
-          border-radius: 50%;
-          font-size: 40px;
-          transition: all 0.5s ease;
-        "
-        onclick="closeList()"
-        >close</i
-      >
-      <div id="exercise-list-container" class="exercise-list-container"></div>
+    <div class="exercise-container">
+      <img
+        src="exercise_images\tricep-dip.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Triceps')"
+      />
+      <div class="exercise-title">Triceps</div>
     </div>
-  </section>
-  <script src="main.js"></script>
-  <script src="exerciseCatalogueHandler.js"></script>
-</html>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\bench-press.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Chest')"
+      />
+      <div class="exercise-title">Chest</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\pull-up.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Back')"
+      />
+      <div class="exercise-title">Back</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\legs.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Legs')"
+      />
+      <div class="exercise-title">Legs</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\ab.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Abs')"
+      />
+      <div class="exercise-title">Abs</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\stretching.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Stretching')"
+      />
+      <div class="exercise-title">Stretching</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\warmup.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Warm Up')"
+      />
+      <div class="exercise-title">Warm Up</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\lats.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Lats')"
+      />
+      <div class="exercise-title">Lats</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\deadlift.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Hamstrings')"
+      />
+      <div class="exercise-title" style="right: -20px">Hamstrings</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\calves.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Calves')"
+      />
+      <div class="exercise-title">Calves</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\legpress.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Quadriceps')"
+      />
+      <div class="exercise-title">Quadriceps</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\traps.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Trapezius')"
+      />
+      <div class="exercise-title">Trapezius</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\shoulders.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Shoulders')"
+      />
+      <div class="exercise-title">Shoulders</div>
+    </div>
+
+    <div class="exercise-container">
+      <img
+        src="exercise_images\squat.jpg"
+        class="exercise-card"
+        onclick="loadExercises('Glutes')"
+      />
+      <div class="exercise-title">Glutes</div>
+    </div>
+  </div>
+
+  <div id="exercise-list" class="exercise-list">
+    <p
+      style="
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        margin-left: 40%;
+        font-style: oblique;
+      "
+    >
+      Image by ikatod on Freepik
+    </p>
+    <div class="exercise-list-bg"></div>
+    <i
+      id="close-list"
+      class="material-icons material-icons-hover"
+      style="
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border-radius: 50%;
+        font-size: 40px;
+        transition: all 0.5s ease;
+      "
+      onclick="closeList()"
+      >close</i
+    >
+    <div id="exercise-list-container" class="exercise-list-container"></div>
+  </div>
+</section>

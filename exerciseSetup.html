@@ -1,113 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Electrolize&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="exerciseSetup.css" />
-    <link rel="stylesheet" href="exerciseCatalogue.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <title>Exerise Setup</title>
-    <style></style>
-  </head>
-  <body id="#content">
-    <div class="setup-container">
-      <div id="routine-setup" class="routine-setup-box">
-        <p class="setup-prompt">Please select your desired workout split:</p>
-        <div class="setup-button-container">
-          <button class="setup-button" onclick="getRotuineTemplate('PPL')">
-            PPL
-          </button>
-          <button
-            class="setup-button"
-            onclick="getRotuineTemplate('UPPER-LOWER')"
-          >
-            UPPER-LOWER
-          </button>
-          <button class="setup-button" onclick="getRotuineTemplate('FULLBODY')">
-            FULL BODY
-          </button>
-        </div>
-        <div class="setup-info-container">
-          <p class="setup-info">
-            <span style="font-weight: bold; font-size: 17px"
-              >Push Pull Legs(PPL):</span
-            >
-            A more advanced workout split for those who can spare the extra time
-            and have enough energy to train for 6 days at most for the
-            week.Offers the most returns on muscle and peak aesthetics as push
-            muscles, pull muscles and leg muscles are equally and effectively
-            worked.
-          </p>
-          <p class="setup-info">
-            <span style="font-weight: bold; font-size: 17px">Upper-Lower:</span>
-            An intermediate workout split for those who have a moderate amount
-            of time and energy to train for 4 days at most for the week. Offers
-            an optimal return on muscle gained with not much energy being needed
-            to be dedicated to training. The upper body is targetted on one day
-            while the legs will be targetted on another with enough rest being
-            given in between.
-          </p>
-          <p class="setup-info">
-            <span style="font-weight: bold; font-size: 17px">Full Body:</span> A
-            beginner friendly workout for those who are new to the gym and have
-            yet to make their first few gains in muscle mass. Little energy and
-            time is needed as only 3 days of the week are spent training. With
-            the entire body being worked each day and adequate rest being give
-            in between routines. Returns on muscle gains may plateau after the
-            firt few months as the extra training needed for each muscle group
-            will not be provided.
-          </p>
-        </div>
-      </div>
-      <div id="exercise-setup" class="exercise-setup">
-        <div id="day-select" class="day-select" date-selected="0"></div>
-        <div class="exercise-select" id="exercise-select"></div>
-        <button class="confirm-button" type="submit" onclick="checkRoutine()">
-          Confirm
+<body id="#content">
+  <div class="setup-container">
+    <div id="routine-setup" class="routine-setup-box">
+      <p class="setup-prompt">Please select your desired workout split:</p>
+      <div class="setup-button-container">
+        <button class="setup-button" onclick="getRotuineTemplate('PPL')">
+          PPL
         </button>
-        <button class="back-button" onclick="resetMenu()">Back</button>
+        <button
+          class="setup-button"
+          onclick="getRotuineTemplate('UPPER-LOWER')"
+        >
+          UPPER-LOWER
+        </button>
+        <button class="setup-button" onclick="getRotuineTemplate('FULLBODY')">
+          FULL BODY
+        </button>
       </div>
-      <div id="exercise-list" class="exercise-list">
-        <p
-          style="
-            position: absolute;
-            z-index: 1;
-            text-align: center;
-            margin-left: 40%;
-            font-style: oblique;
-          "
-        >
-          Image by ikatod on Freepik
+      <div class="setup-info-container">
+        <p class="setup-info">
+          <span style="font-weight: bold; font-size: 17px"
+            >Push Pull Legs(PPL):</span
+          >
+          A more advanced workout split for those who can spare the extra time
+          and have enough energy to train for 6 days at most for the week.Offers
+          the most returns on muscle and peak aesthetics as push muscles, pull
+          muscles and leg muscles are equally and effectively worked.
         </p>
-        <div class="exercise-list-bg"></div>
-        <i
-          id="close-list"
-          class="material-icons material-icons-hover"
-          style="
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            border-radius: 50%;
-            font-size: 40px;
-            transition: all 0.5s ease;
-          "
-          onclick="closeCatalogue()"
-          >close</i
-        >
-        <div id="exercise-list-container" class="exercise-list-container"></div>
+        <p class="setup-info">
+          <span style="font-weight: bold; font-size: 17px">Upper-Lower:</span>
+          An intermediate workout split for those who have a moderate amount of
+          time and energy to train for 4 days at most for the week. Offers an
+          optimal return on muscle gained with not much energy being needed to
+          be dedicated to training. The upper body is targetted on one day while
+          the legs will be targetted on another with enough rest being given in
+          between.
+        </p>
+        <p class="setup-info">
+          <span style="font-weight: bold; font-size: 17px">Full Body:</span> A
+          beginner friendly workout for those who are new to the gym and have
+          yet to make their first few gains in muscle mass. Little energy and
+          time is needed as only 3 days of the week are spent training. With the
+          entire body being worked each day and adequate rest being give in
+          between routines. Returns on muscle gains may plateau after the firt
+          few months as the extra training needed for each muscle group will not
+          be provided.
+        </p>
       </div>
     </div>
-    <script src="main.js"></script>
-    <script src="exerciseCatalogueHandler.js"></script>
-    <script src="exerciseSetupHandler.js"></script>
-  </body>
-</html>
+    <div id="exercise-setup" class="exercise-setup">
+      <div id="day-select" class="day-select" date-selected="0"></div>
+      <div class="exercise-select" id="exercise-select"></div>
+      <button class="confirm-button" type="submit" onclick="checkRoutine()">
+        Confirm
+      </button>
+      <button class="back-button" onclick="resetMenu()">Back</button>
+    </div>
+    <div id="exercise-list" class="exercise-list">
+      <p
+        style="
+          position: absolute;
+          z-index: 1;
+          text-align: center;
+          margin-left: 40%;
+          font-style: oblique;
+        "
+      >
+        Image by ikatod on Freepik
+      </p>
+      <div class="exercise-list-bg"></div>
+      <i
+        id="close-list"
+        class="material-icons material-icons-hover"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          border-radius: 50%;
+          font-size: 40px;
+          transition: all 0.5s ease;
+        "
+        onclick="closeCatalogue()"
+        >close</i
+      >
+      <div id="exercise-list-container" class="exercise-list-container"></div>
+    </div>
+  </div>
+</body>

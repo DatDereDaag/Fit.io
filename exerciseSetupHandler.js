@@ -50,13 +50,9 @@ function checkRoutine() {
     }
   }
 
-  submitRoutine();
-}
-
-//TODO:IMPLEMENT LOGIC WITH FIRESTORE TO STORE routineSelected ARRAY
-function submitRoutine() {
-  console.log("Saving routine");
-  console.log(routineSelected);
+  const submit = new Event("submit");
+  document.dispatchEvent(submit);
+  window.location.replace("index.html");
 }
 
 function showCatalogue(group) {
