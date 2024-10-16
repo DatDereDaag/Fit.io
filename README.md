@@ -8,6 +8,7 @@ A fitness web application to allow users to view exercises and create their own 
 ![image](https://github.com/user-attachments/assets/fd400042-6ef6-4fcd-9dcc-8acf67419dd2)
 ![image](https://github.com/user-attachments/assets/feff1f9d-2a24-4d18-b205-6649b4db2bad)
 ![image](https://github.com/user-attachments/assets/c74edc44-ae9c-4c62-97e1-c6af0186a37c)
-![image](https://github.com/user-attachments/assets/6caf7888-61c9-405c-b21f-9c57c4132d7c)
+![image](https://github.com/user-attachments/assets/7958ddc5-9b36-4e2b-a9e6-9630e37ddc33)
+
 
 
