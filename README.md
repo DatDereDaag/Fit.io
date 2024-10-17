@@ -1,3 +1,5 @@
+### ***NOTICE-at the time of posting this the API used is no longer working***
+
 
 # Fit.io
 A fitness web application to allow users to view exercises and create their own personalized routines.
