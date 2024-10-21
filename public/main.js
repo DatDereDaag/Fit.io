@@ -57,7 +57,7 @@ async function getExerciseData() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "f3f7425e2cmshe5260b3af03762cp12b226jsn32bc146c795b",
+      "X-RapidAPI-Key": 'API_KEY',
       "X-RapidAPI-Host": "work-out-api1.p.rapidapi.com",
     },
   };
