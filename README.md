@@ -4,6 +4,13 @@
 # Fit.io
 A fitness web application to allow users to view exercises and create their own personalized routines.
 
+## Technologies Used
+* Firebase
+* JavaScript
+* HTML & CSS
+
+## API Used: https://rapidapi.com/naeimsalib/api/work-out-api1
+
 ## Sample Screenshots
 ![Screenshot 2024-07-23 174754](https://github.com/user-attachments/assets/73d81855-e713-4980-b7cd-e3b0ac81e8f3)
 ![image](https://github.com/user-attachments/assets/518bac91-4c99-4d4b-8abb-75fe750f8c96)
