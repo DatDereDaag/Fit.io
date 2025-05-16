@@ -11,6 +11,10 @@ A fitness web application to allow users to view exercises and create their own 
 
 ## API Used: https://rapidapi.com/naeimsalib/api/work-out-api1
 
+## Demo Video
+
+![Fit io GIF](https://github.com/user-attachments/assets/a200ebbe-481c-4ebe-a0f2-871ecf8da9a4)
+
 ## Sample Screenshots
 ![Screenshot 2024-07-23 174754](https://github.com/user-attachments/assets/73d81855-e713-4980-b7cd-e3b0ac81e8f3)
 ![image](https://github.com/user-attachments/assets/518bac91-4c99-4d4b-8abb-75fe750f8c96)
@@ -19,7 +23,6 @@ A fitness web application to allow users to view exercises and create their own 
 ![image](https://github.com/user-attachments/assets/c74edc44-ae9c-4c62-97e1-c6af0186a37c)
 ![image](https://github.com/user-attachments/assets/7958ddc5-9b36-4e2b-a9e6-9630e37ddc33)
 
-![Fit io GIF](https://github.com/user-attachments/assets/a200ebbe-481c-4ebe-a0f2-871ecf8da9a4)
 
 
 
