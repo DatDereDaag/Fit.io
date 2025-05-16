@@ -19,5 +19,7 @@ A fitness web application to allow users to view exercises and create their own 
 ![image](https://github.com/user-attachments/assets/c74edc44-ae9c-4c62-97e1-c6af0186a37c)
 ![image](https://github.com/user-attachments/assets/7958ddc5-9b36-4e2b-a9e6-9630e37ddc33)
 
+![Fit io GIF](https://github.com/user-attachments/assets/a200ebbe-481c-4ebe-a0f2-871ecf8da9a4)
+
 
 
